@@ -12,7 +12,7 @@ Route::get('/prueba', function () {
 });
 
 Route::get('/usuarios', function () {
-    dd('Listado general de usuarios');
+    return view('usuarios');
 })->name('usuarios');
 
 Route::prefix('admin')->group(function () {
