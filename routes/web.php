@@ -27,7 +27,7 @@ Route::prefix('admin')->group(function () {
 });
 
 Route::get('/productos', function () {
-    dd('Listado general de productos');
+    return view('productos');
 })->name('productos');
 
 Route::get('/dashboard', function () {
