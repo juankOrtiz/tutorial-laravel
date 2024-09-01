@@ -7,6 +7,29 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/prueba', function () {
+    dd('Ruta de prueba');
+});
+
+Route::get('/usuarios', function () {
+    dd('Listado general de usuarios');
+})->name('usuarios');
+
+Route::prefix('admin')->group(function () {
+    // Ruta definitiva: /admin/usuarios
+    Route::get('/usuarios', function () {
+        dd('Listado completo de usuarios');
+    })->name('admin.usuarios');
+
+    Route::get('/productos', function () {
+        dd('Listado completo de productos');
+    })->name('admin.productos');
+});
+
+Route::get('/productos', function () {
+    dd('Listado general de productos');
+})->name('productos');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
