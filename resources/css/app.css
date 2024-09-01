@@ -1,3 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+h1 {
+    color: navy;
+    font-size: 28px;
+}
+
+.contenedor {
+    margin: 25px 30px;
+}
+
+.lista-elementos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lista-elementos > li {
+    list-style: none;
+    color: navy;
+    font-size: 18px;
+}
