@@ -8,7 +8,7 @@ class UsuariosController extends Controller
 {
     // index -> listado de elementos del recurso
     public function index() {
-        return view('usuarios');
+        return view('usuarios.index');
     }
 
     // show -> la pagina con los datos de un elemento puntual del recurso
@@ -18,7 +18,7 @@ class UsuariosController extends Controller
 
     // create -> la pagina para crear un elemento del recurso
     public function create() {
-        dd("Create");
+        return view('usuarios.create');
     }
 
     // store -> guardar los datos de un recurso creado
