@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Nota;
 use Illuminate\Http\Request;
 
 class NotasController extends Controller
@@ -11,7 +12,12 @@ class NotasController extends Controller
      */
     public function index()
     {
-        //
+        // Buscar todas las notas de la BD y enviarlas a la vista
+        // SELECT * FROM notas;
+        $notas = Nota::all();
+        return view('notas.index', [
+            'notas' => $notas,
+        ]);
     }
 
     /**
