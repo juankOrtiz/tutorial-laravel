@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\GuardarUsuarioRequest;
 use Illuminate\Http\Request;
 
 class UsuariosController extends Controller
@@ -22,8 +23,8 @@ class UsuariosController extends Controller
     }
 
     // store -> guardar los datos de un recurso creado
-    public function store() {
-        dd("Store");
+    public function store(GuardarUsuarioRequest $request) {
+        echo 'Validado';
     }
 
     // edit -> la pagina para editar datos de un elemento del recurso
