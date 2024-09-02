@@ -8,7 +8,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/usuarios', [UsuariosController::class, 'index'])->name('usuarios.index');
+Route::resource('usuarios', UsuariosController::class);
 
 Route::prefix('admin')->group(function () {
     // Ruta definitiva: /admin/usuarios

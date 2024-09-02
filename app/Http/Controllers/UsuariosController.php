@@ -12,14 +12,32 @@ class UsuariosController extends Controller
     }
 
     // show -> la pagina con los datos de un elemento puntual del recurso
+    public function show() {
+        dd("Show");
+    }
 
     // create -> la pagina para crear un elemento del recurso
+    public function create() {
+        dd("Create");
+    }
 
     // store -> guardar los datos de un recurso creado
+    public function store() {
+        dd("Store");
+    }
 
     // edit -> la pagina para editar datos de un elemento del recurso
+    public function edit() {
+        dd("Edit");
+    }
 
     // update -> actualizar los datos de un recurso
+    public function update() {
+        dd("Update");
+    }
 
     // destroy -> eliminar un elemento del recurso
+    public function destroy() {
+        dd("Destroy");
+    }
 }
