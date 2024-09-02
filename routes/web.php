@@ -1,12 +1,18 @@
 <?php
 
+use App\Http\Controllers\NotasController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TareasController;
 use App\Http\Controllers\UsuariosController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+
+Route::resource('notas', NotasController::class);
+
+Route::resource('tareas', TareasController::class);
 
 Route::resource('usuarios', UsuariosController::class);
 
